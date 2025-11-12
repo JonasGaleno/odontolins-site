@@ -1,26 +1,272 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Atualizando paleta para estética premium Dra. Camila */
+  /* Primary: Fundo escuro sofisticado */
+  --primary: #3d3d3d;
+  --primary-foreground: #ffffff;
+
+  /* Primary Secundário: Cinza/Marrom elegante */
+  --primary-dark: #2a2a2a;
+  --primary-dark-foreground: #ffffff;
+
+  /* Accent: Ouro premium mais sofisticado */
+  --accent: #c9a961;
+  --accent-light: #dbb97a;
+  --accent-dark: #b39456;
+  --accent-foreground: #2a2a2a;
+
+  /* Neutrals: Branco/creme + cinza suave */
+  --background: #2a2a2a;
+  --background-light: #f5f5f5;
+  --foreground: #2a2a2a;
+  --card: #ffffff;
+  --card-foreground: #2a2a2a;
+  --muted: #e8e8e8;
+  --muted-foreground: #666666;
+  --border: #ddd;
+
+  /* UI Elements */
+  --popover: #ffffff;
+  --popover-foreground: #2a2a2a;
+  --secondary: #3d3d3d;
+  --secondary-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --input: #f5f5f5;
+  --ring: #c9a961;
+
+  /* Charts */
+  --chart-1: #3d3d3d;
+  --chart-2: #c9a961;
+  --chart-3: #2a2a2a;
+  --chart-4: #b39456;
+  --chart-5: #e8e8e8;
+
+  /* Layout */
+  --radius: 0.625rem;
+
+  /* Sidebar */
+  --sidebar: #ffffff;
+  --sidebar-foreground: #2a2a2a;
+  --sidebar-primary: #3d3d3d;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #c9a961;
+  --sidebar-accent-foreground: #2a2a2a;
+  --sidebar-border: #e0e0e0;
+  --sidebar-ring: #c9a961;
+}
+
+.dark {
+  --primary: #0052a3;
+  --primary-foreground: #ffffff;
+  --accent: #d4af5f;
+  --accent-foreground: #0d1b3a;
+  --background: #0d1b3a;
+  --foreground: #ffffff;
+  --card: #1a2942;
+  --card-foreground: #ffffff;
+  --muted: #2d3e52;
+  --muted-foreground: #a0b8d4;
+  --border: #2d3e52;
+  --input: #2d3e52;
+  --ring: #0052a3;
 }
 
 @theme inline {
+  /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
+  /* adicionando fonte Poppins mais moderna */
+  --font-sans: "Poppins", system-ui, -apple-system, sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Animações de scroll e transições */
+/* Aumentando distância e tornando animações mais pronunciadas */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(169, 126, 60, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(169, 126, 60, 0.8);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Aumentando claridade do degradê dourado nas bordas */
+@keyframes gradient-border {
+  0%,
+  100% {
+    box-shadow: inset 0 0 20px rgba(212, 175, 95, 0.7), 0 0 15px rgba(230, 200, 107, 0.5);
+  }
+  50% {
+    box-shadow: inset 0 0 30px rgba(212, 175, 95, 0.95), 0 0 25px rgba(230, 200, 107, 0.8);
+  }
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.9s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.9s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.9s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.9s ease-out forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  /* adicionando will-change para otimização de performance */
+  will-change: transform, opacity;
+  /* removendo scale que causava glitch e jitter */
+}
+
+/* Removendo animação de saída que causava flicker - mantém apenas o estado active */
+.scroll-reveal.active {
+  /* removendo transform duplicado que causava conflito */
+  animation: slideInUp 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* aplicando efeito de degradê em cards e bordas */
+.service-card-glow {
+  animation: gradient-border 3s ease-in-out infinite;
 }
