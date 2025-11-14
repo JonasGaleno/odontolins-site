@@ -15,6 +15,8 @@ const SERVICES = [
   { id: "pediatria", name: "Pediatria" },
 ]
 
+// teste git
+
 export default function Home() {
   const scrollElementsRef = useRef<HTMLDivElement>(null)
   const [titleWidth, setTitleWidth] = useState(0)
