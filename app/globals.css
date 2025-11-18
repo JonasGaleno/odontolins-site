@@ -252,19 +252,6 @@
   animation: float 3s ease-in-out infinite;
 }
 
-
-/*.scroll-reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  transition-delay: 0.1s; 
-}
-
-.scroll-reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}*/
-
 .scroll-reveal {
   opacity: 0;
   transform: translateY(60px);
