@@ -252,17 +252,26 @@
   animation: float 3s ease-in-out infinite;
 }
 
+
+/*.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition-delay: 0.1s; 
+}
+
+.scroll-reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}*/
+
 .scroll-reveal {
   opacity: 0;
   transform: translateY(60px);
-  /* adicionando will-change para otimização de performance */
   will-change: transform, opacity;
-  /* removendo scale que causava glitch e jitter */
 }
 
-/* Removendo animação de saída que causava flicker - mantém apenas o estado active */
 .scroll-reveal.active {
-  /* removendo transform duplicado que causava conflito */
   animation: slideInUp 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 

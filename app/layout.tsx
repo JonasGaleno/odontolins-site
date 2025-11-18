@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Geist, Geist_Mono, Poppins } from "next/font/google"
 import "./globals.css"
 import { Header } from "@/components/header"
+import { Footer } from "@/components/Footer"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
@@ -25,9 +26,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans antialiased ${_poppins.className} text-white`} style={{ backgroundColor: "#0d1b3a" }}>
+      <body 
+        className={`font-sans antialiased ${_poppins.className} text-white`} 
+        style={{ backgroundColor: "#0d1b3a" }}
+        suppressHydrationWarning
+      >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )

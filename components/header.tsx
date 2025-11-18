@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
+import Image from "next/image"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -22,7 +23,15 @@ export function Header() {
           className="font-light text-2xl hover:opacity-80 transition-opacity"
           style={{ color: "#c9a961", letterSpacing: "1px" }}
         >
-          ODONTOLINS
+          <div className="relative w-[280px] aspect-[5/1] overflow-hidden">
+            <Image
+              className="object-cover object-center"
+              src={"/img/logo/logov2.png"}
+              alt={"Logo OdontoLins"}
+              title={"Logo OdontoLins"}
+              fill
+            />
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
@@ -42,8 +51,7 @@ export function Header() {
           </Link>
           <Button
             size="sm"
-            className="text-white font-semibold px-6 py-2 rounded-full"
-            style={{ backgroundColor: "#c9a961", color: "#2a2a2a", border: "none" }}
+            className="font-semibold px-6 py-2 rounded-full cursor-pointer bg-[#c9a961] text-[#2a2a2a] border-none hover:bg-[#C4B37A]"
             onClick={() => window.open("https://wa.me/55", "_blank")}
           >
             CONTATO
