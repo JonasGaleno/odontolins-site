@@ -1,41 +1,8 @@
 "use client"
 
+import { testimonials } from "@/data/testimonials"
 import type React from "react"
-
 import { useState, useEffect } from "react"
-
-const REVIEWS = [
-  {
-    id: 1,
-    text: "Excelente atendimento! Muito profissional e atencioso. Recomendo!",
-    author: "João Silva",
-    rating: 5,
-  },
-  {
-    id: 2,
-    text: "Clínica moderna com equipamentos de ponta. Resultado excepcional!",
-    author: "Maria Santos",
-    rating: 5,
-  },
-  {
-    id: 3,
-    text: "Dentista atencioso e cuidadoso. Voltarei com certeza!",
-    author: "Pedro Oliveira",
-    rating: 5,
-  },
-  {
-    id: 4,
-    text: "Ambiente acolhedor e equipe qualificada. Super recomendo!",
-    author: "Ana Costa",
-    rating: 5,
-  },
-  {
-    id: 5,
-    text: "Melhor experiência odontológica que já tive. Parabéns ao time!",
-    author: "Carlos Mendes",
-    rating: 5,
-  },
-]
 
 export default function ReviewsCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -43,7 +10,7 @@ export default function ReviewsCarousel() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + itemsPerView) % REVIEWS.length)
+      setCurrentIndex((prev) => (prev + itemsPerView) % testimonials.length)
     }, 3000)
 
     return () => clearInterval(interval)
@@ -69,24 +36,24 @@ export default function ReviewsCarousel() {
   }
 
   const nextReview = () => {
-    setCurrentIndex((prev) => (prev + itemsPerView) % REVIEWS.length)
+    setCurrentIndex((prev) => (prev + itemsPerView) % testimonials.length)
   }
 
   const prevReview = () => {
-    setCurrentIndex((prev) => (prev - itemsPerView + REVIEWS.length) % REVIEWS.length)
+    setCurrentIndex((prev) => (prev - itemsPerView + testimonials.length) % testimonials.length)
   }
 
   const getVisibleReviews = () => {
     const reviews = []
     for (let i = 0; i < itemsPerView; i++) {
-      reviews.push(REVIEWS[(currentIndex + i) % REVIEWS.length])
+      reviews.push(testimonials[(currentIndex + i) % testimonials.length])
     }
     return reviews
   }
 
   const visibleReviews = getVisibleReviews()
   const currentPage = Math.floor(currentIndex / itemsPerView)
-  const totalPages = Math.ceil(REVIEWS.length / itemsPerView)
+  const totalPages = Math.ceil(testimonials.length / itemsPerView)
 
   return (
     <div className="w-full">
@@ -122,7 +89,7 @@ export default function ReviewsCarousel() {
         {[...Array(totalPages)].map((_, pageIndex) => (
           <button
             key={pageIndex}
-            onClick={() => setCurrentIndex((pageIndex * itemsPerView) % REVIEWS.length)}
+            onClick={() => setCurrentIndex((pageIndex * itemsPerView) % testimonials.length)}
             className="w-3 h-3 rounded-full transition-all"
             style={{
               backgroundColor: pageIndex === currentPage ? "#c9a961" : "rgba(201, 169, 97, 0.3)",

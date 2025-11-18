@@ -1,11 +1,11 @@
 "use client"
 
 import { useEffect } from "react"
-import { Testimonials } from "@/components/Testimonials"
-import { Localization } from "@/components/Localization"
-import { ProceduresSection } from "@/components/ProceduresSection"
-import { HeroSection } from "@/components/HeroSection"
-import { AllProcedures } from "@/components/AllProcedures"
+import { Testimonials } from "@/components/home/Testimonials"
+import { Localization } from "@/components/home/Localization"
+import { ProceduresSection } from "@/components/home/ProceduresSection"
+import { HeroSection } from "@/components/home/HeroSection"
+import { AllProcedures } from "@/components/home/AllProcedures"
 
 export default function Home() {
   useEffect(() => {

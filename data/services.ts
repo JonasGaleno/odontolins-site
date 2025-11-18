@@ -1,7 +1,7 @@
 export const services = [
     { 
         id: "implantes", 
-        name: "Implantes" 
+        name: "Implantes"
     },
     { 
         id: "lentes", 

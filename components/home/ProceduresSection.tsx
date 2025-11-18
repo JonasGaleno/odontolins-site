@@ -1,7 +1,7 @@
 "use client"
 
 import { services } from "@/data/services";
-import SectionTitle from "./SectionTitle";
+import SectionTitle from "../SectionTitle";
 
 export function ProceduresSection() {
     const handleServiceClick = (serviceId: string) => {

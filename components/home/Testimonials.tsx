@@ -1,6 +1,6 @@
 "use client"
 
-import SectionTitle from "./SectionTitle";
+import SectionTitle from "../SectionTitle";
 import ReviewsCarousel from "./reviews-carousel";
 
 export function Testimonials() {

@@ -1,13 +1,41 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
+import { useEffect } from "react"
 import { procedures } from "@/data/procedures"
-import { IoLogoWhatsapp, IoMdArrowBack } from "react-icons/io";
-import Image from "next/image"
+import { IoLogoWhatsapp } from "react-icons/io";
 import SectionTitle from "@/components/SectionTitle"
 import BackButton from "@/components/BackButton"
+import DentistInfo from "@/components/procedures/DentistInfo"
+import { ProcedureDetail } from "@/type/procedures"
+import ImplantesImageLayout from "@/components/procedures/ImplantesImageLayout";
+import LentesImageLayout from "@/components/procedures/LentesImageLayout";
+import HarmonizacaoImageLayout from "@/components/procedures/HarmonizacaoImageLayout";
+import ClareamentoImageLayout from "@/components/procedures/ClareamentoImageLayout";
+import SisoImageLayout from "@/components/procedures/SisoImageLayout";
+import AparelhoImageLayout from "@/components/procedures/AparelhoImageLayout";
+import PlasticaImageLayout from "@/components/procedures/PlasticaImageLayout";
+import PediatriaImageLayout from "@/components/procedures/PediatriaImageLayout";
+
+const ProcedureImages = ({ procedure }: {procedure: ProcedureDetail}) => {
+  switch (procedure.id) {
+    case 'implantes':
+      return <ImplantesImageLayout images={procedure.images} />;
+    case 'lentes':
+      return <LentesImageLayout images={procedure.images} />;
+    case 'harmonizacao':
+      return <HarmonizacaoImageLayout images={procedure.images} />;
+    case 'clareamento':
+      return <ClareamentoImageLayout images={procedure.images} />;
+    case 'siso':
+      return <SisoImageLayout images={procedure.images} />;
+    case 'aparelho':
+      return <AparelhoImageLayout images={procedure.images} />;
+    case 'plastica':
+      return <PlasticaImageLayout images={procedure.images} />;
+    case 'pediatria':
+      return <PediatriaImageLayout images={procedure.images} />;
+  }
+}
 
 export default function ProceduresPage() {
   useEffect(() => {
@@ -83,67 +111,25 @@ export default function ProceduresPage() {
               </div>
 
               <div className="p-4 md:p-6 lg:p-8">
-                {procedure.dentist && (
-                  <div className="mb-6 md:mb-8 scroll-reveal flex flex-col sm:flex-row items-start gap-3 md:gap-4">
-                    <div className="relative border-2 border-[#c9a961] w-16 h-16 md:w-20 md:h-20 rounded-full flex-shrink-0 mx-auto sm:mx-0 overflow-hidden">
-                      <Image 
-                        className="object-cover"
-                        src={procedure.dentistImage || "/placeholder.svg"}
-                        fill
-                        alt={procedure.dentist}
-                        title={procedure.dentist}
-                      />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg text-[#2a2a2a] md:text-xl lg:text-2xl font-semibold mb-2 text-center sm:text-left">
-                        {procedure.dentist}
-                      </h3>
-                      <p className="text-gray-700 text-xs md:text-sm lg:text-base leading-relaxed text-justify">
-                        {procedure.dentistBio}
-                      </p>
-                    </div>
-                  </div>
-                )}
+                {procedure.dentist && 
+                  <DentistInfo 
+                    dentistName={procedure.dentist} 
+                    dentistImageSrc={procedure.dentistImage} 
+                    dentistBio={procedure.dentistBio}
+                  />
+                }
 
-                <div className="mb-6 md:mb-8">
-                  {procedure.beforeAfter && (
-                    <h3 className="text-base md:text-lg font-semibold text-gray-800 mb-4 md:mb-6 text-center scroll-reveal">
-                      Antes e Depois
-                    </h3>
-                  )}
-                  <div className="space-y-4 md:space-y-6">
-                    <div className="grid grid-cols-2 gap-3 md:gap-4 scroll-reveal">
-                      {procedure.images && (
-                        procedure.images.map((item, key) => (
-                          <div key={key} className="flex flex-col items-center">
-                            <p className="text-xs md:text-sm font-semibold text-gray-600 mb-2 uppercase text-center">
-                              {item.label}
-                            </p>
-                            <div
-                              className="relative bg-[#f5f5f5] border-2 md:border-3 border-[#C9A961] rounded-lg flex items-center justify-center aspect-square hover:shadow-lg transition-all duration-300 hover:scale-101 w-80 h-80 md:w-[500px] md:h-96 overflow-hidden"
-                            >
-                              <Image
-                                className="object-cover"
-                                src={item.src}
-                                fill
-                                alt="Imagem Antes"
-                                title="Representação do estado anterior ao procedimento"
-                              />
-                            </div>
-                          </div>
-                        ))
-                      )}
-                    </div>
-                  </div>
+                <ProcedureImages procedure={procedure} />
+
+                <div className="w-full flex items-center justify-center">
+                  <button
+                    className="flex flex-row gap-4 items-center justify-center rounded-xl px-10 py-1 bg-[#3d3d3d] border-2 border-[#c9a961] text-white font-bold text-sm md:text-base lg:text-lg hover:opacity-80 hover:shadow-lg hover:scale-101 transition-all scroll-reveal cursor-pointer"
+                    style={{ fontFamily: "Poppins, sans-serif" }}
+                    onClick={() => window.open("https://wa.me/55", "_blank")}
+                  >
+                    <IoLogoWhatsapp className="w-6 h-6" color="#25D366"/> Fale Conosco via WhatsApp
+                  </button>
                 </div>
-
-                <Button
-                  size="lg"
-                  className="w-full bg-[#3d3d3d] border-2 border-[#c9a961] text-white font-bold text-sm md:text-base lg:text-lg hover:shadow-lg hover:scale-101 transition-all scroll-reveal cursor-pointer"
-                  onClick={() => window.open("https://wa.me/55", "_blank")}
-                >
-                  <IoLogoWhatsapp className="leading-none" size={64} color="#25D366"/> Fale Conosco via WhatsApp
-                </Button>
               </div>
             </div>
           ))}

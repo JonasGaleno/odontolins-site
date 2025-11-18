@@ -14,7 +14,6 @@ export const procedures = [
             "Aparência e função natural",
             "Durabilidade de até 20 anos",
         ],
-        beforeAfter: false,
         images: [
             {
                 label: "Unitário",
@@ -41,7 +40,6 @@ export const procedures = [
             "Conservação de estrutura dentária",
             "Resultado imediato",
         ],
-        beforeAfter: true,
         images: [
             {
                 label: "Antes",
@@ -68,7 +66,6 @@ export const procedures = [
             "Resultados naturais",
             "Sem necessidade de cirurgia",
         ],
-        beforeAfter: true,
         images: [
             {
                 label: "Antes",
@@ -92,7 +89,6 @@ export const procedures = [
             "Resultados visíveis", 
             "Efeito duradouro"
         ],
-        beforeAfter: true,
         images: [
             {
                 label: "Antes",
@@ -116,7 +112,6 @@ export const procedures = [
             "Recuperação rápida",
             "Acompanhamento pós-operatório",
         ],
-        beforeAfter: true,
         images: [
             {
                 label: "Antes",
@@ -143,7 +138,6 @@ export const procedures = [
             "Técnica moderna e confortável",
             "Acompanhamento mensal",
         ],
-        beforeAfter: true,
         images: [
             {
                 label: "Antes",
@@ -167,7 +161,6 @@ export const procedures = [
             "Técnica estética e segura",
             "Recuperação rápida",
         ],
-        beforeAfter: true,
         images: [
             {
                 label: "Antes",
@@ -191,7 +184,6 @@ export const procedures = [
             "Prevenção e educação",
             "Fluretação e selante",
         ],
-        beforeAfter: true,
         images: [
             {
                 label: "Antes",

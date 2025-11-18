@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link";
-import SectionTitle from "./SectionTitle";
+import SectionTitle from "../SectionTitle";
 import { Button } from "@/components/ui/button"
 
 export function AllProcedures() {
