@@ -4,6 +4,8 @@ import { Geist, Geist_Mono, Poppins } from "next/font/google"
 import "./globals.css"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/Footer"
+import GTMLoader from "@/components/google/GTMLoader"
+import GTMLoaderNoScript from "@/components/google/GTMLoaderNoScript"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
@@ -25,12 +27,16 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
+      <head>
+        {/* <GTMLoader consent={true} /> */}
+      </head>
       <body 
         className={`font-sans antialiased ${_poppins.className} text-white`} 
         style={{ backgroundColor: "#0d1b3a" }}
         suppressHydrationWarning
       >
+        {/* <GTMLoaderNoScript consent={true} /> */}
         <Header />
         {children}
         <Footer />

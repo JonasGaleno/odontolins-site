@@ -38,6 +38,15 @@ const ProcedureImages = ({ procedure }: {procedure: ProcedureDetail}) => {
 }
 
 export default function ProceduresPage() {
+  const handleWhatsAppClick = () => {
+    const whatsappPhone = "5561992137533";
+    const mensagem = encodeURIComponent(
+        "Olá, tudo bem? Vim do site Odonto Lins e gostaria de agendar uma consulta."
+    );
+    
+    window.open(`https://api.whatsapp.com/send?phone=${whatsappPhone}&text=${mensagem}`,'_blank');
+  };
+  
   useEffect(() => {
     const observedElements = new WeakMap()
 
@@ -80,7 +89,7 @@ export default function ProceduresPage() {
         <BackButton />
         <SectionTitle title="Nossos Procedimentos" subtitle="Conheça todos os procedimentos oferecidos pela nossa clínica com detalhes e informações"/>
 
-        <div className="space-y-6 md:space-y-8">
+        <div className="space-y-8 md:space-y-10">
           {procedures.map((procedure) => (
             <div
               key={procedure.id}
@@ -93,7 +102,7 @@ export default function ProceduresPage() {
               }}
             >
               <div
-                className="p-4 md:p-6 lg:p-8 border-b-2 md:border-b-4 text-center"
+                className="p-4 md:p-4 lg:p-6 border-b-2 md:border-b-4 text-center"
                 style={{
                   borderColor: "#c9a961",
                   background: "linear-gradient(135deg, #f9f6f0, #fdfcf9)",
@@ -125,7 +134,7 @@ export default function ProceduresPage() {
                   <button
                     className="flex flex-row gap-4 items-center justify-center rounded-xl px-10 py-1 bg-[#3d3d3d] border-2 border-[#c9a961] text-white font-bold text-sm md:text-base lg:text-lg hover:opacity-80 hover:shadow-lg hover:scale-101 transition-all scroll-reveal cursor-pointer"
                     style={{ fontFamily: "Poppins, sans-serif" }}
-                    onClick={() => window.open("https://wa.me/55", "_blank")}
+                    onClick={handleWhatsAppClick}
                   >
                     <IoLogoWhatsapp className="w-6 h-6" color="#25D366"/> Fale Conosco via WhatsApp
                   </button>

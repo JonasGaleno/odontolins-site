@@ -3,7 +3,11 @@
 import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
 
-export function HeroSection() {
+interface HeroSectionProps {
+    handleWhatsAppClick: () => void;
+}
+
+export function HeroSection({handleWhatsAppClick}: HeroSectionProps) {
     return (
         <section className="relative w-full h-screen md:h-screen overflow-visible flex items-center justify-center animate-fade-in">
             <div
@@ -15,7 +19,7 @@ export function HeroSection() {
                 <div className="w-full h-full flex items-center justify-center px-4">
                     <div className="text-center max-w-4xl scroll-reveal">
                         <div className="w-full flex flex-col items-center mb-8">
-                            <div className="relative w-[500px] aspect-[5/1] z-10">
+                            <div className="relative w-[300px] md:w-[500px] aspect-[5/1] z-10">
                                 <Image
                                     className="object-cover"
                                     src={"/img/logo/logov2.png"}
@@ -40,7 +44,7 @@ export function HeroSection() {
                             <button
                                 className="flex flex-row gap-4 items-center justify-center px-10 py-2 bg-[#c9a961] text-[#2a2a2a] font-semibold text-lg h-auto rounded-full shadow-lg hover:shadow-2xl hover:scale-101 transition-all cursor-pointer hover:bg-[#C4B37A]"
                                 style={{ fontFamily: "Poppins, sans-serif" }}
-                                onClick={() => window.open("https://wa.me/55", "_blank")}
+                                onClick={handleWhatsAppClick}
                             >
                                 <FaWhatsapp className="w-6 h-6" color="#2a2a2a"/> AGENDAR UMA CONSULTA
                             </button>

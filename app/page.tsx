@@ -8,6 +8,15 @@ import { HeroSection } from "@/components/home/HeroSection"
 import { AllProcedures } from "@/components/home/AllProcedures"
 
 export default function Home() {
+  const handleWhatsAppClick = () => {
+    const whatsappPhone = "5561992137533";
+    const mensagem = encodeURIComponent(
+        "Olá, tudo bem? Vim do site Odonto Lins e gostaria de agendar uma consulta."
+    );
+    
+    window.open(`https://api.whatsapp.com/send?phone=${whatsappPhone}&text=${mensagem}`,'_blank');
+  };
+
   useEffect(() => {
     const observedElements = new WeakMap()
 
@@ -36,7 +45,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#f5f5f5]">
-      <HeroSection />
+      <HeroSection handleWhatsAppClick={handleWhatsAppClick}/>
       <ProceduresSection />
       <AllProcedures />
       <Localization />

@@ -8,6 +8,19 @@ import Image from "next/image"
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
+  const handleWhatsAppClick = (isMobile: boolean) => {
+    const whatsappPhone = "5561992137533";
+    const mensagem = encodeURIComponent(
+        "Olá, tudo bem? Vim do site Odonto Lins e gostaria de agendar uma consulta."
+    );
+
+    if (isMobile) {
+      setIsOpen(false)
+    }
+    
+    window.open(`https://api.whatsapp.com/send?phone=${whatsappPhone}&text=${mensagem}`,'_blank');
+  };
+
   return (
     <header
       className="text-white sticky top-0 z-50 border-b shadow-lg"
@@ -23,7 +36,7 @@ export function Header() {
           className="font-light text-2xl hover:opacity-80 transition-opacity"
           style={{ color: "#c9a961", letterSpacing: "1px" }}
         >
-          <div className="relative w-[280px] aspect-[5/1] overflow-hidden">
+          <div className="relative w-[170px] md:w-[280px] aspect-[5/1] overflow-hidden">
             <Image
               className="object-cover object-center"
               src={"/img/logo/logov2.png"}
@@ -52,7 +65,7 @@ export function Header() {
           <Button
             size="sm"
             className="font-semibold px-6 py-2 rounded-full cursor-pointer bg-[#c9a961] text-[#2a2a2a] border-none hover:bg-[#C4B37A]"
-            onClick={() => window.open("https://wa.me/55", "_blank")}
+            onClick={() => handleWhatsAppClick(false)}
           >
             CONTATO
           </Button>
@@ -109,10 +122,7 @@ export function Header() {
                 size="sm"
                 className="w-full text-white font-semibold rounded-full"
                 style={{ backgroundColor: "#c9a961", color: "#2a2a2a", border: "none" }}
-                onClick={() => {
-                  window.open("https://wa.me/55", "_blank")
-                  setIsOpen(false)
-                }}
+                onClick={() => handleWhatsAppClick(true)}
               >
                 CONTATO
               </Button>

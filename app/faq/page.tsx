@@ -10,6 +10,15 @@ export default function FAQPage() {
   const [openCategory, setOpenCategory] = useState<number>(0)
   const [openQuestion, setOpenQuestion] = useState<number | null>(null)
 
+  const handleWhatsAppClick = () => {
+    const whatsappPhone = "5561992137533";
+    const mensagem = encodeURIComponent(
+        "Olá, tudo bem? Vim do site Odonto Lins e gostaria de agendar uma consulta."
+    );
+    
+    window.open(`https://api.whatsapp.com/send?phone=${whatsappPhone}&text=${mensagem}`,'_blank');
+  };
+
   useEffect(() => {
     const observedElements = new WeakMap()
 
@@ -129,7 +138,7 @@ export default function FAQPage() {
           <button
               className="flex flex-row gap-4 items-center justify-center px-6 py-3 border-2 border-[#c9a961] bg-[#2a2a2a] text-white font-semibold text-sm h-auto rounded-full hover:shadow-lg hover:scale-101 transition-all cursor-pointer hover:opacity-90"
               style={{ fontFamily: "Poppins, sans-serif" }}
-              onClick={() => window.open("https://wa.me/55", "_blank")}
+              onClick={handleWhatsAppClick}
           >
               <IoLogoWhatsapp className="w-6 h-6" color="#25D366"/> Fale Conosco via WhatsApp
           </button>

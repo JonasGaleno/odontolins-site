@@ -16,20 +16,25 @@ export const procedures = [
         ],
         images: [
             {
-                label: "Unitário",
-                src: "/img/procedures/implante-unitário.jpg",
-            },
-            {
-                label: "Protocolo",
-                src: "/img/procedures/implante-tipo-protocolo.jpg",
-            },
+                title: "",
+                imgs: [
+                    {
+                        label: "Unitário",
+                        src: "/img/procedures/implantes/implante-unitário.jpg",
+                    },
+                    {
+                        label: "Protocolo",
+                        src: "/img/procedures/implantes/implante-tipo-protocolo.jpg",
+                    },
+                ]
+            }
         ],
     },
     {
         id: "lentes",
         title: "Lentes de Contato Dental",
         dentist: "Dr. Bruno",
-        dentistImage: "/img/dentists/dr-raoney.jpg",
+        dentistImage: "/img/dentists/dr-bruno2.png",
         description: "Transformação do sorriso com lentes dentárias ultra finas",
         dentistBio: "O Dr. Bruno é cirurgião-dentista especialista em lentes de contato dental, oferecendo tratamentos estéticos de alta precisão. Seu foco é proporcionar harmonia, naturalidade e um sorriso perfeito, com técnicas modernas e personalizadas para cada paciente.",
         duration: "2-3 sessões",
@@ -42,12 +47,17 @@ export const procedures = [
         ],
         images: [
             {
-                label: "Antes",
-                src: "/img/procedures/antes-lentes.jpg",
-            },
-            {
-                label: "Depois",
-                src: "/img/procedures/depois-lentes.jpg",
+                title: "Antes e Depois",
+                imgs: [
+                    {
+                        label: "Antes",
+                        src: "/img/procedures/lentes/antes-lentes.png",
+                    },
+                    {
+                        label: "Depois",
+                        src: "/img/procedures/lentes/depois-lentes.png",
+                    }
+                ]
             }
         ],
     },
@@ -68,12 +78,30 @@ export const procedures = [
         ],
         images: [
             {
-                label: "Antes",
-                src: "/img/procedures/implante-unitário.jpg",
+                title: "Rugas Profuntas",
+                imgs: [
+                    {
+                        label: "Antes",
+                        src: "/img/procedures/harmonizacao/antes-rugas-profundas.jpeg",
+                    },
+                    {
+                        label: "Depois",
+                        src: "/img/procedures/harmonizacao/depois-rugas-profundas.jpeg",
+                    },
+                ]
             },
             {
-                label: "Depois",
-                src: "/img/procedures/implante-unitário.jpg",
+                title: "Full Face",
+                imgs: [
+                    {
+                        label: "Antes",
+                        src: "/img/procedures/harmonizacao/antes-fullface.png",
+                    },
+                    {
+                        label: "Depois",
+                        src: "/img/procedures/harmonizacao/depois-fullface.png",
+                    },
+                ]
             }
         ],
     },
@@ -91,12 +119,17 @@ export const procedures = [
         ],
         images: [
             {
-                label: "Antes",
-                src: "/img/procedures/antes-clareamento.jpg",
-            },
-            {
-                label: "Depois",
-                src: "/img/procedures/depois-clareamento.jpg",
+                title: "Antes e Depois",
+                imgs: [
+                    {
+                        label: "Antes",
+                        src: "/img/procedures/clareamento/antes-clareamento.jpg",
+                    },
+                    {
+                        label: "Depois",
+                        src: "/img/procedures/clareamento/depois-clareamento.jpg",
+                    }
+                ]
             }
         ],
     },
@@ -114,12 +147,17 @@ export const procedures = [
         ],
         images: [
             {
-                label: "Antes",
-                src: "/img/procedures/implante-unitário.jpg",
-            },
-            {
-                label: "Depois",
-                src: "/img/procedures/implante-unitário.jpg",
+                title: "",
+                imgs: [
+                    {
+                        label: "",
+                        src: "/img/procedures/siso/ilustração-dor-siso.jpg",
+                    },
+                    {
+                        label: "",
+                        src: "/img/procedures/siso/ilustração-siso.jpg",
+                    }
+                ]
             }
         ],
     },
@@ -140,12 +178,25 @@ export const procedures = [
         ],
         images: [
             {
-                label: "Antes",
-                src: "/img/procedures/implante-unitário.jpg",
-            },
-            {
-                label: "Depois",
-                src: "/img/procedures/implante-unitário.jpg",
+                title: "",
+                imgs: [
+                    {
+                        label: "Alinhador",
+                        src: "/img/procedures/aparelho/aparelho-alinhador.jpg",
+                    },
+                    {
+                        label: "Autolgiado Estético",
+                        src: "/img/procedures/aparelho/aparelho-autoligado-estetico.jpg",
+                    },
+                    {
+                        label: "Autoligado Metálico",
+                        src: "/img/procedures/aparelho/aparelho-autoligado-metalico.jpg",
+                    },
+                    {
+                        label: "Convencional",
+                        src: "/img/procedures/aparelho/aparelho-convencional.jpg",
+                    },
+                ]
             }
         ],
     },
@@ -163,12 +214,17 @@ export const procedures = [
         ],
         images: [
             {
-                label: "Antes",
-                src: "/img/procedures/implante-unitário.jpg",
-            },
-            {
-                label: "Depois",
-                src: "/img/procedures/implante-unitário.jpg",
+                title: "Antes e Depois",
+                imgs: [
+                    {
+                        label: "Antes",
+                        src: "/img/procedures/plastica/antes-plastica-gengival.png",
+                    },
+                    {
+                        label: "Depois",
+                        src: "/img/procedures/plastica/depois-plastica-gengival.png",
+                    }
+                ]
             }
         ],
     },
@@ -186,12 +242,13 @@ export const procedures = [
         ],
         images: [
             {
-                label: "Antes",
-                src: "/img/procedures/implante-unitário.jpg",
-            },
-            {
-                label: "Depois",
-                src: "/img/procedures/implante-unitário.jpg",
+                title: "",
+                imgs: [
+                    {
+                        label: "",
+                        src: "/img/procedures/pediatria/pediatria.jpg",
+                    }
+                ]
             }
         ],
     },

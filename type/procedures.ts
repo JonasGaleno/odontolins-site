@@ -12,6 +12,11 @@ export interface ProcedureDetail {
 }
 
 export interface ProcedureImages {
+    title: string,
+    imgs: ProcedureImgs[],
+}
+
+export interface ProcedureImgs {
     label: string,
     src: string,
 }
