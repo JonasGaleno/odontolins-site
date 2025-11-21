@@ -8,7 +8,7 @@ interface DentistInfoProps {
 
 export default function DentistInfo({ dentistName, dentistImageSrc, dentistBio }: DentistInfoProps) {
     return (
-        <div className="mb-6 md:mb-8 scroll-reveal flex flex-col sm:flex-row items-start gap-3 md:gap-4">
+        <div className="mb-6 md:mb-8 flex flex-col sm:flex-row items-start gap-3 md:gap-4">
             <div className="relative border-2 border-[#c9a961] w-16 h-16 md:w-20 md:h-20 rounded-full flex-shrink-0 mx-auto sm:mx-0 overflow-hidden">
                 <Image
                     className="object-cover"

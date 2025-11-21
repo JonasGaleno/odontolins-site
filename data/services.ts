@@ -1,34 +1,74 @@
 export const services = [
     { 
         id: "implantes", 
-        name: "Implantes"
+        name: "Implantes",
+        image: {
+            src: "/img/services/Implantes.png",
+            alt: "Imagem Ilustração Implantes",
+            title: "Imagem Ilustração Implantes"
+        }
     },
     { 
         id: "lentes", 
-        name: "Lentes de Contato" 
+        name: "Lentes de Contato",
+        image: {
+            src: "/img/services/Lentes.png",
+            alt: "Imagem Ilustração Lentes",
+            title: "Imagem Ilustração Lentes"
+        }
     },
     { 
         id: "harmonizacao", 
-        name: "Harmonização" 
+        name: "Harmonização",
+        image: {
+            src: "/img/services/Harmonização.png",
+            alt: "Imagem Ilustração Harmonização",
+            title: "Imagem Ilustração Harmonização"
+        }
     },
     { 
         id: "clareamento", 
-        name: "Clareamento" 
+        name: "Clareamento",
+        image: {
+            src: "/img/services/Clareamento.png",
+            alt: "Imagem Ilustração Clareamento",
+            title: "Imagem Ilustração Clareamento"
+        }
     },
     { 
         id: "siso", 
-        name: "Extração de Siso" 
+        name: "Extração de Siso",
+        image: {
+            src: "/img/services/Siso.png",
+            alt: "Imagem Ilustração Siso",
+            title: "Imagem Ilustração Siso"
+        }
     },
     { 
         id: "aparelho", 
-        name: "Aparelho" 
+        name: "Aparelho",
+        image: {
+            src: "/img/services/Aparelho.png",
+            alt: "Imagem Ilustração Aparelho",
+            title: "Imagem Ilustração Aparelho"
+        }
     },
     { 
         id: "plastica", 
-        name: "Plástica Gengival" 
+        name: "Plástica Gengival",
+        image: {
+            src: "/img/services/Plastica.png",
+            alt: "Imagem Ilustração Plastica",
+            title: "Imagem Ilustração Plastica"
+        }
     },
     { 
         id: "pediatria", 
-        name: "Pediatria" 
+        name: "Pediatria",
+        image: {
+            src: "/img/services/Pediatria.png",
+            alt: "Imagem Ilustração Pediatria",
+            title: "Imagem Ilustração Pediatria"
+        }
     },
 ];

@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image";
+import Link from "next/link";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 export function Footer() {
@@ -40,7 +41,7 @@ export function Footer() {
             </div>
             <div className="text-center text-sm md:text-base w-[90%] md:w-[50%]">
                 <span>
-                    © 2025   -   Odonto Lins Ltda 49.949.198/0001-43   www.odontolins.com.br  |  Todos os direitos reservados Varjão Q 5 Conjunto b Lote 4 - Varjão, Brasília - DF, 71555-136
+                    © 2025   -   Feito por <Link className="underline" href="https://www.jonasgaleno.com/" target="_blank" aria-label="Portifólio">Jonas Galeno</Link> e <Link className="underline" href="https://www.linkedin.com/in/matheus-lima-4ba149182/" target="_blank" aria-label="Linkedin">Matheus Lima</Link>  |  Todos os direitos reservados
                 </span>
             </div>
         </div>

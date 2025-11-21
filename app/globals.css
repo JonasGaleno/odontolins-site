@@ -129,7 +129,7 @@
 
 /* Animações de scroll e transições */
 /* Aumentando distância e tornando animações mais pronunciadas */
-@keyframes slideInUp {
+/*@keyframes slideInUp {
   from {
     opacity: 0;
     transform: translateY(60px);
@@ -149,7 +149,7 @@
     opacity: 0;
     transform: translateY(60px);
   }
-}
+}*/
 
 @keyframes fadeIn {
   from {
@@ -252,7 +252,7 @@
   animation: float 3s ease-in-out infinite;
 }
 
-.scroll-reveal {
+/*.scroll-reveal {
   opacity: 0;
   transform: translateY(60px);
   will-change: transform, opacity;
@@ -260,7 +260,7 @@
 
 .scroll-reveal.active {
   animation: slideInUp 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-}
+}*/
 
 /* aplicando efeito de degradê em cards e bordas */
 .service-card-glow {
