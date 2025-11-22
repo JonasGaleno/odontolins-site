@@ -57,7 +57,7 @@ export default function ProceduresPage() {
           {procedures.map((procedure, index) => (
             <ScrollReveal
               key={procedure.id}
-              delay={index * 0.1}
+              delay={index === 0 ? 0.1 : index * 0.1}
               direction="up"
               id={procedure.id}
               className="rounded-xl md:rounded-2xl overflow-hidden scroll-mt-20 md:scroll-mt-24 hover:shadow-xl transition-all max-w-full"
