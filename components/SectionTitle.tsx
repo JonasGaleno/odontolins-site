@@ -1,3 +1,5 @@
+import ScrollReveal from "./ScrollReveal";
+
 interface SectionTitle {
     title: string;
     subtitle?: string;
@@ -5,7 +7,11 @@ interface SectionTitle {
 
 export default function SectionTitle({title, subtitle}: SectionTitle) {
     return (
-        <div className="scroll-reveal text-center">
+        <ScrollReveal
+            delay={0.2}
+            direction="up"
+            className="text-center"
+        >
             <h1
                 className="text-3xl md:text-4xl lg:text-5xl font-light mb-2"
                 style={{ color: "#2a2a2a", fontFamily: "Poppins, sans-serif", letterSpacing: "1px" }}
@@ -18,6 +24,6 @@ export default function SectionTitle({title, subtitle}: SectionTitle) {
                     {subtitle}
                 </p>
             )}
-        </div>
+        </ScrollReveal>
     );
 }

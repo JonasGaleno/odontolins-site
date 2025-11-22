@@ -3,7 +3,7 @@
 import { services } from "@/data/services";
 import SectionTitle from "../SectionTitle";
 import Image from "next/image";
-import { imageConfigDefault } from "next/dist/shared/lib/image-config";
+import ScrollReveal from "../ScrollReveal";
 
 export function ProceduresSection() {
     const handleServiceClick = (serviceId: string) => {
@@ -15,31 +15,38 @@ export function ProceduresSection() {
             <SectionTitle title="NOSSOS PROCEDIMENTOS" />
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full">
                     {services.map((service) => (
-                        <button
+                        <ScrollReveal
                             key={service.id}
-                            onClick={() => handleServiceClick(service.id)}
-                            className="rounded-2xl overflow-hidden hover:shadow-xl transition-all cursor-pointer group flex flex-col hover:scale-105 bg-white border-2 p-6 scroll-reveal"
-                            style={{
-                                borderColor: "#c9a961",
-                                boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
-                            }}
+                            delay={0.2}
+                            direction="up"
+                            className="w-full"
                         >
-                            <div className="relative w-full h-40 md:h-48 lg:h-56 bg-gray-100 flex items-center justify-center rounded-lg mb-4 border border-gray-200 overflow-hidden">
-                                <Image
-                                    className="object-cover"
-                                    src={service.image.src}
-                                    fill
-                                    alt={service.image.alt}
-                                    title={service.image.title}
-                                />
-                            </div>
-                            <h3
-                                className="font-semibold group-hover:text-yellow-600 transition-colors text-sm md:text-base text-center flex-1 flex items-center justify-center w-full"
-                                style={{ color: "#2a2a2a" }}
+                            <button
+                                key={service.id}
+                                onClick={() => handleServiceClick(service.id)}
+                                className="rounded-2xl overflow-hidden hover:shadow-xl transition-all cursor-pointer group flex flex-col hover:scale-105 bg-white border-2 p-6 w-full"
+                                style={{
+                                    borderColor: "#c9a961",
+                                    boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
+                                }}
                             >
-                                {service.name}
-                            </h3>
-                        </button>
+                                <div className="relative w-full h-40 md:h-48 lg:h-56 bg-gray-100 flex items-center justify-center rounded-lg mb-4 border border-gray-200 overflow-hidden">
+                                    <Image
+                                        className="object-cover"
+                                        src={service.image.src}
+                                        fill
+                                        alt={service.image.alt}
+                                        title={service.image.title}
+                                    />
+                                </div>
+                                <h3
+                                    className="font-semibold group-hover:text-yellow-600 transition-colors text-sm md:text-base text-center flex-1 flex items-center justify-center w-full"
+                                    style={{ color: "#2a2a2a" }}
+                                >
+                                    {service.name}
+                                </h3>
+                            </button>
+                        </ScrollReveal>
                     ))}
                 </div>
             </div>

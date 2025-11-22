@@ -1,10 +1,11 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import BackButton from "@/components/BackButton"
 import { faqs } from "@/data/faq"
 import SectionTitle from "@/components/SectionTitle"
 import { IoLogoWhatsapp } from "react-icons/io"
+import ScrollReveal from "@/components/ScrollReveal"
 
 export default function FAQPage() {
   const [openCategory, setOpenCategory] = useState<number>(0)
@@ -19,34 +20,6 @@ export default function FAQPage() {
     window.open(`https://api.whatsapp.com/send?phone=${whatsappPhone}&text=${mensagem}`,'_blank');
   };
 
-  useEffect(() => {
-    const observedElements = new WeakMap()
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const hasActive = entry.target.classList.contains("active")
-
-          if (entry.isIntersecting && !hasActive) {
-            entry.target.classList.add("active")
-            observedElements.set(entry.target, true)
-          } else if (!entry.isIntersecting && !hasActive) {
-            return
-          } else if (!entry.isIntersecting && hasActive) {
-            entry.target.classList.remove("active")
-            observedElements.set(entry.target, false)
-          }
-        })
-      },
-      { threshold: 0.1 },
-    )
-
-    const elements = document.querySelectorAll(".scroll-reveal")
-    elements.forEach((el) => observer.observe(el))
-
-    return () => observer.disconnect()
-  }, [])
-
   return (
     <main className="min-h-screen py-4 md:py-8 px-4" style={{ backgroundColor: "#f5f5f5" }}>
       <div className="max-w-6xl mx-auto">
@@ -54,7 +27,11 @@ export default function FAQPage() {
         <SectionTitle title="Perguntas Frequentes"/>
       </div>
       <div className="max-w-4xl mx-auto pt-10 flex flex-col gap-12">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 scroll-reveal">
+        <ScrollReveal
+          delay={0.2}
+          direction="up"
+          className="grid grid-cols-2 md:grid-cols-3 gap-3"
+        >
           {faqs.map((category, index) => (
             <button
               key={index}
@@ -72,9 +49,13 @@ export default function FAQPage() {
               {category.name}
             </button>
           ))}
-        </div>
+        </ScrollReveal>
 
-        <div className="flex flex-col gap-3 scroll-reveal">
+        <ScrollReveal
+          delay={0.5}
+          direction="up"
+          className="flex flex-col gap-3"
+        >
           {faqs[openCategory].questions.map((item, index) => (
             <div
               key={index}
@@ -113,10 +94,12 @@ export default function FAQPage() {
               )}
             </div>
           ))}
-        </div>
+        </ScrollReveal>
 
-        <div
-          className="flex flex-col items-center rounded-lg p-8 text-center border-2 scroll-reveal"
+        <ScrollReveal
+          delay={0.8}
+          direction="up"
+          className="flex flex-col items-center rounded-lg p-8 text-center border-2"
           style={{
             backgroundColor: "#f9f9f9",
             borderColor: "#c9a961",
@@ -142,7 +125,7 @@ export default function FAQPage() {
           >
               <IoLogoWhatsapp className="w-6 h-6" color="#25D366"/> Fale Conosco via WhatsApp
           </button>
-        </div>
+        </ScrollReveal>
       </div>
     </main>
   )

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
+import ScrollReveal from "../ScrollReveal";
 
 interface HeroSectionProps {
     handleWhatsAppClick: () => void;
@@ -17,7 +18,11 @@ export function HeroSection({handleWhatsAppClick}: HeroSectionProps) {
                 }}
             >
                 <div className="w-full h-full flex items-center justify-center px-4">
-                    <div className="text-center max-w-4xl scroll-reveal">
+                    <ScrollReveal
+                        delay={0.2}
+                        direction="up"
+                        className="text-center max-w-4xl"
+                    >
                         <div className="w-full flex flex-col items-center mb-8">
                             <div className="relative w-[300px] md:w-[500px] aspect-[5/1] z-10">
                                 <Image
@@ -49,7 +54,7 @@ export function HeroSection({handleWhatsAppClick}: HeroSectionProps) {
                                 <FaWhatsapp className="w-6 h-6" color="#2a2a2a"/> AGENDAR UMA CONSULTA
                             </button>
                         </div>
-                    </div>
+                    </ScrollReveal>
                 </div>
             </div>
         </section>

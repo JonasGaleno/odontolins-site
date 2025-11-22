@@ -1,11 +1,16 @@
 "use client"
 
+import ScrollReveal from "../ScrollReveal";
 import SectionTitle from "../SectionTitle";
 
 export function Localization() {
   return (
-    <section className="py-16 md:py-24 px-4 scroll-reveal" style={{ backgroundColor: "#f5f5f5" }}>
-        <div className="max-w-4xl mx-auto">
+    <section className="py-16 md:py-24 px-4 bg-[#f5f5f5]">
+        <ScrollReveal
+            delay={0.2}
+            direction="up"
+            className="max-w-4xl mx-auto"
+        >
             <SectionTitle title="LOCALIZAÇÃO" subtitle="Varjão Q 5 Conjunto b Lote 4 - Varjão, Brasília - DF, 71555-136"/>
             <div
                 className="w-full h-96 rounded-2xl overflow-hidden"
@@ -23,7 +28,7 @@ export function Localization() {
                     loading="lazy"
                 />
             </div>
-        </div>
+        </ScrollReveal>
     </section>
   );
 }

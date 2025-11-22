@@ -3,6 +3,7 @@
 import { testimonials } from "@/data/testimonials"
 import type React from "react"
 import { useState, useEffect } from "react"
+import ScrollReveal from "../ScrollReveal"
 
 export default function ReviewsCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -56,7 +57,11 @@ export default function ReviewsCarousel() {
   const totalPages = Math.ceil(testimonials.length / itemsPerView)
 
   return (
-    <div className="w-full">
+    <ScrollReveal
+      delay={0.2}
+      direction="up"
+      className="w-full"
+    >
       <div
         className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-8 cursor-grab active:cursor-grabbing"
         onTouchStart={handleTouchStart}
@@ -98,6 +103,6 @@ export default function ReviewsCarousel() {
           />
         ))}
       </div>
-    </div>
+    </ScrollReveal>
   )
 }
