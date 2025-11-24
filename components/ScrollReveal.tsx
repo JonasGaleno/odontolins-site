@@ -18,8 +18,8 @@ const getVariants = (delay: number, duration: number, direction: 'up' | 'left' |
     // Estado inicial (Oculto)
     hidden: {
         opacity: 0,
-        y: direction === 'up' ? 60 : 0, 
-        x: direction === 'left' ? -60 : direction === 'right' ? 60 : 0,
+        y: direction === 'up' ? 30 : 0, 
+        x: direction === 'left' ? -30 : direction === 'right' ? 30 : 0,
     },
     // Estado final (Visível)
     visible: {
@@ -51,9 +51,11 @@ export default function ScrollReveal({
   ...rest
 }: ScrollRevealProps) {
   const ref = useRef(null)
-  // useInView detecta se o elemento está visível no viewport
-  // once: true garante que a animação só ocorre uma vez (ideal para scroll-reveal)
-  const isInView = useInView(ref, { once: true, amount: 0.1 }) // 10% do elemento visível
+  // const isInView = useInView(ref, { once: true, amount: 0.1 }) // 10% do elemento visível
+  const isInView = useInView(ref, { 
+    once: true, 
+    amount: 0.1, // Tenta detectar quando 50% está visível
+  })
 
   // Ajusta a transição para incluir o delay
   const variants = getVariants(delay, duration, direction);
@@ -68,11 +70,7 @@ export default function ScrollReveal({
       // Se estiver visível, anima para "visible"
       animate={isInView ? "visible" : "hidden"} 
       className={className}
-      // Garante que o estado 'visible' é mantido mesmo que a prop 'animate' mude
-      // Isso é crucial para evitar o flickering/sumiço
-      whileInView="visible" 
-      // viewport: { once: true, amount: 0.1 } é outra forma de configurar o useInView
-      // mas estamos usando o hook useInView para controle total
+      // whileInView="visible"
       {...rest}
     >
       {children}

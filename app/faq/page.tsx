@@ -119,11 +119,11 @@ export default function FAQPage() {
             <p style={{ color: "#dc2626", fontWeight: "bold" }}>NÃO ACEITAMOS PLANOS DE SAÚDE</p>
           </div>
           <button
-              className="flex flex-row gap-4 items-center justify-center px-6 py-3 border-2 border-[#c9a961] bg-[#2a2a2a] text-white font-semibold text-sm h-auto rounded-full hover:shadow-lg hover:scale-101 transition-all cursor-pointer hover:opacity-90"
+              className="flex flex-row gap-2 md:gap-4 items-center justify-center px-6 py-3 bg-[#c9a961] text-[#2a2a2a] font-semibold text-xs md:text-sm h-auto rounded-full hover:shadow-lg hover:scale-101 transition-all cursor-pointer hover:opacity-90"
               style={{ fontFamily: "Poppins, sans-serif" }}
               onClick={handleWhatsAppClick}
           >
-              <IoLogoWhatsapp className="w-6 h-6" color="#25D366"/> Fale Conosco via WhatsApp
+              <IoLogoWhatsapp className="w-4 h-4 md:w-6 md:h-6" color="#2a2a2a"/> Fale Conosco via WhatsApp
           </button>
         </ScrollReveal>
       </div>

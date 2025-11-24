@@ -15,6 +15,7 @@ import AparelhoImageLayout from "@/components/procedures/AparelhoImageLayout";
 import PlasticaImageLayout from "@/components/procedures/PlasticaImageLayout";
 import PediatriaImageLayout from "@/components/procedures/PediatriaImageLayout";
 import ScrollReveal from "@/components/ScrollReveal";
+import { FaWhatsapp } from "react-icons/fa";
 
 const ProcedureImages = ({ procedure }: {procedure: ProcedureDetail}) => {
   switch (procedure.id) {
@@ -57,7 +58,7 @@ export default function ProceduresPage() {
           {procedures.map((procedure, index) => (
             <ScrollReveal
               key={procedure.id}
-              delay={0.2}
+              delay={index * 0.1}
               direction="up"
               id={procedure.id}
               className="rounded-xl md:rounded-2xl overflow-hidden scroll-mt-20 md:scroll-mt-24 hover:shadow-xl transition-all max-w-full"
@@ -87,7 +88,7 @@ export default function ProceduresPage() {
 
               <div className="p-4 md:p-6 lg:p-8">
                 {procedure.dentist && 
-                  <ScrollReveal direction="left" delay={index * 0.1 + 0.2}>
+                  <ScrollReveal direction="left" delay={index * 0.3}>
                     <DentistInfo 
                       dentistName={procedure.dentist} 
                       dentistImageSrc={procedure.dentistImage} 
@@ -99,13 +100,14 @@ export default function ProceduresPage() {
                 <ProcedureImages procedure={procedure} />
 
                 <div className="w-full flex items-center justify-center">
-                  <ScrollReveal direction="up" delay={index * 0.1 + 0.4}>
+                  <ScrollReveal direction="up" delay={0.2}>
                     <button
-                      className="flex flex-row gap-4 items-center justify-center rounded-xl px-10 py-1 bg-[#3d3d3d] border-2 border-[#c9a961] text-white font-bold text-sm md:text-base lg:text-lg hover:opacity-80 hover:shadow-lg hover:scale-101 transition-all cursor-pointer"
+                      className="flex flex-row gap-2 md:gap-4 items-center justify-center rounded-xl px-10 py-2 md:py-1 bg-[#c9a961] text-[#2a2a2a] font-bold text-xs md:text-base lg:text-lg hover:opacity-80 hover:shadow-lg hover:scale-101 transition-all cursor-pointer"
                       style={{ fontFamily: "Poppins, sans-serif" }}
                       onClick={handleWhatsAppClick}
                     >
-                      <IoLogoWhatsapp className="w-6 h-6" color="#25D366"/> Fale Conosco via WhatsApp
+                      <FaWhatsapp className="w-4 h-4 md:w-6 md:h-6" color="#2a2a2a"/> 
+                      <span>Fale Conosco via WhatsApp</span>
                     </button>
                   </ScrollReveal>
                 </div>

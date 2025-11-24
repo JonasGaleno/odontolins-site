@@ -24,7 +24,7 @@ export function ProceduresSection() {
                             <button
                                 key={service.id}
                                 onClick={() => handleServiceClick(service.id)}
-                                className="rounded-2xl overflow-hidden hover:shadow-xl transition-all cursor-pointer group flex flex-col hover:scale-105 bg-white border-2 p-6 w-full"
+                                className="rounded-2xl overflow-hidden hover:shadow-xl transition-all cursor-pointer group flex flex-col hover:scale-105 bg-white border-2 p-2 sm:p-6 w-full h-full"
                                 style={{
                                     borderColor: "#c9a961",
                                     boxShadow: "0 4px 15px rgba(0,0,0,0.08)",

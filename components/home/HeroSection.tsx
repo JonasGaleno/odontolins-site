@@ -47,7 +47,7 @@ export function HeroSection({handleWhatsAppClick}: HeroSectionProps) {
                                 DESCUBRA TUDO QUE PODEMOS FAZER PELO SEU SORRISO
                             </p>
                             <button
-                                className="flex flex-row gap-4 items-center justify-center px-10 py-2 bg-[#c9a961] text-[#2a2a2a] font-semibold text-lg h-auto rounded-full shadow-lg hover:shadow-2xl hover:scale-101 transition-all cursor-pointer hover:bg-[#C4B37A]"
+                                className="flex flex-row gap-2 md:gap-4 items-center justify-center px-8 md:px-10 py-2 bg-[#c9a961] text-[#2a2a2a] font-semibold text-base md:text-lg h-auto rounded-full shadow-lg hover:shadow-2xl hover:scale-101 transition-all cursor-pointer hover:bg-[#C4B37A]"
                                 style={{ fontFamily: "Poppins, sans-serif" }}
                                 onClick={handleWhatsAppClick}
                             >

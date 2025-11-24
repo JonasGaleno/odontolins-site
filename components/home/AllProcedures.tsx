@@ -20,7 +20,7 @@ export function AllProcedures() {
                 >
                     <Link href="/procedures">
                         <Button
-                            className="text-white border-2 border-[#c9a961] bg-[#3d3d3d] font-semibold text-lg px-10 py-6 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-101 cursor-pointer"
+                            className="bg-[#c9a961] text-[#2a2a2a] font-semibold text-base md:text-lg px-8 md:px-10 py-5 md:py-6 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-101 cursor-pointer hover:bg-[#C4B37A]"
                         >
                             VER TODOS OS PROCEDIMENTOS
                         </Button>
