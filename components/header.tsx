@@ -4,6 +4,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
 import Image from "next/image"
+import { FaFacebook, FaInstagram } from "react-icons/fa"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -62,6 +63,26 @@ export function Header() {
           <Link href="/faq" className="hover:opacity-80 transition-opacity font-light" style={{ color: "#ffffff" }}>
             FAQ
           </Link>
+          <div className="flex gap-3">
+            <a
+                href="https://www.facebook.com/profile.php?id=61583641703351"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-all hover:scale-105"
+                aria-label="Facebook"
+            >
+                <FaFacebook className="w-6 h-6 text-[#c9a961]"/>
+            </a>
+            <a
+                href="https://www.instagram.com/odontolinsbsb?igsh=bWl3cW8xZzJiemFl&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-all hover:scale-105"
+                aria-label="Instagram"
+            >
+                <FaInstagram className="w-6 h-6 text-[#c9a961]"/>
+            </a>
+          </div>
           <Button
             size="sm"
             className="font-semibold px-6 py-2 rounded-full cursor-pointer bg-[#c9a961] text-[#2a2a2a] border-none hover:bg-[#C4B37A]"

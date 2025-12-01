@@ -119,7 +119,7 @@ export default function FAQPage() {
             <p style={{ color: "#dc2626", fontWeight: "bold" }}>NÃO ACEITAMOS PLANOS DE SAÚDE</p>
           </div>
           <button
-              className="flex flex-row gap-2 md:gap-4 items-center justify-center px-6 py-3 bg-[#c9a961] text-[#2a2a2a] font-semibold text-xs md:text-sm h-auto rounded-full hover:shadow-lg hover:scale-101 transition-all cursor-pointer hover:opacity-90"
+              className="flex flex-row gap-2 md:gap-4 items-center justify-center px-6 py-3 bg-[#c9a961] text-[#2a2a2a] font-semibold text-sm md:text-base h-auto rounded-full hover:shadow-lg hover:scale-101 transition-all cursor-pointer hover:opacity-90"
               style={{ fontFamily: "Poppins, sans-serif" }}
               onClick={handleWhatsAppClick}
           >

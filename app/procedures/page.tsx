@@ -93,6 +93,7 @@ export default function ProceduresPage() {
                       dentistName={procedure.dentist} 
                       dentistImageSrc={procedure.dentistImage} 
                       dentistBio={procedure.dentistBio}
+                      dentistCrf={procedure.dentistCrf}
                     />
                   </ScrollReveal>
                 }

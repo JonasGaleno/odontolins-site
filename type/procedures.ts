@@ -3,11 +3,9 @@ export interface ProcedureDetail {
     title: string,
     dentist?: string,
     dentistImage?: string,
+    dentistCrf?: string,
     description: string,
     dentistBio?: string,
-    duration: string,
-    price: string,
-    details: string[],
     images: ProcedureImages[],
 }
 
