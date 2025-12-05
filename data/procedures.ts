@@ -20,6 +20,19 @@ export const procedures = [
                         src: "/img/procedures/implantes/implante-tipo-protocolo.jpg",
                     },
                 ]
+            },
+            {
+                title: "Antes e Depois",
+                imgs: [
+                    {
+                        label: "Antes",
+                        src: "/img/procedures/implantes/implante-antes.webp",
+                    },
+                    {
+                        label: "Depois",
+                        src: "/img/procedures/implantes/implante-depois.webp",
+                    },
+                ]
             }
         ],
     },
@@ -42,6 +55,32 @@ export const procedures = [
                     {
                         label: "Depois",
                         src: "/img/procedures/lentes/depois-lentes.png",
+                    }
+                ]
+            },
+            {
+                title: "",
+                imgs: [
+                    {
+                        label: "Antes",
+                        src: "/img/procedures/lentes/lentes-contato-antes-2.webp",
+                    },
+                    {
+                        label: "Depois",
+                        src: "/img/procedures/lentes/lentes-contato-depois-2.webp",
+                    }
+                ]
+            },
+            {
+                title: "",
+                imgs: [
+                    {
+                        label: "Antes",
+                        src: "/img/procedures/lentes/lentes-contato-antes-3.webp",
+                    },
+                    {
+                        label: "Depois",
+                        src: "/img/procedures/lentes/lentes-contato-depois-3.webp",
                     }
                 ]
             }
@@ -81,6 +120,58 @@ export const procedures = [
                         src: "/img/procedures/harmonizacao/depois-fullface.png",
                     },
                 ]
+            },
+            {
+                title: "Antes e Depois",
+                imgs: [
+                    {
+                        label: "Antes",
+                        src: "/img/procedures/harmonizacao/botox-antes.webp",
+                    },
+                    {
+                        label: "Depois",
+                        src: "/img/procedures/harmonizacao/botox-depois.webp",
+                    },
+                ]
+            },
+            {
+                title: "",
+                imgs: [
+                    {
+                        label: "Antes",
+                        src: "/img/procedures/harmonizacao/lipo-papada-antes.webp",
+                    },
+                    {
+                        label: "Depois",
+                        src: "/img/procedures/harmonizacao/lipo-papada-depois.webp",
+                    },
+                ]
+            },
+            {
+                title: "",
+                imgs: [
+                    {
+                        label: "Antes",
+                        src: "/img/procedures/harmonizacao/preenchimento-labial-antes.webp",
+                    },
+                    {
+                        label: "Depois",
+                        src: "/img/procedures/harmonizacao/preenchimento-labial-depois.webp",
+                    },
+                ]
+            },
+            {
+                title: "",
+                imgs: [
+                    {
+                        label: "Antes",
+                        src: "/img/procedures/harmonizacao/preenchimento-labial-antes2.webp",
+                    },
+                    {
+                        label: "Depois",
+                        src: "/img/procedures/harmonizacao/preenchimento-labial-depois2.webp",
+                    },
+                ]
             }
         ],
     },
@@ -105,8 +196,8 @@ export const procedures = [
         ],
     },
     {
-        id: "tratamento-siso",
-        title: "Tratamento de Siso",
+        id: "tratamento-canal",
+        title: "Tratamento de Canal",
         description: "O tratamento de canal é uma técnica utilizada para tratar problemas na parte interna do dente, como complicações com cárie, fraturas na dentição e indicação de prótese.",
         images: [
             {
@@ -114,7 +205,11 @@ export const procedures = [
                 imgs: [
                     {
                         label: "",
-                        src: "/img/procedures/pediatria/pediatria.jpg",
+                        src: "/img/procedures/tratamento-canal/ilustração-dor-siso.jpg",
+                    },
+                    {
+                        label: "",
+                        src: "/img/procedures/tratamento-canal/tratamento-canal.webp",
                     }
                 ]
             }
@@ -130,7 +225,7 @@ export const procedures = [
                 imgs: [
                     {
                         label: "",
-                        src: "/img/procedures/siso/ilustração-dor-siso.jpg",
+                        src: "/img/procedures/siso/siso.webp",
                     },
                     {
                         label: "",

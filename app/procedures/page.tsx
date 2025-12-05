@@ -16,6 +16,7 @@ import PlasticaImageLayout from "@/components/procedures/PlasticaImageLayout";
 import PediatriaImageLayout from "@/components/procedures/PediatriaImageLayout";
 import ScrollReveal from "@/components/ScrollReveal";
 import { FaWhatsapp } from "react-icons/fa";
+import TratamentoCanalImageLayout from "@/components/procedures/TratamentoCanalImageLayout";
 
 const ProcedureImages = ({ procedure }: {procedure: ProcedureDetail}) => {
   switch (procedure.id) {
@@ -35,6 +36,8 @@ const ProcedureImages = ({ procedure }: {procedure: ProcedureDetail}) => {
       return <PlasticaImageLayout images={procedure.images} />;
     case 'pediatria':
       return <PediatriaImageLayout images={procedure.images} />;
+    case 'tratamento-canal':
+      return <TratamentoCanalImageLayout images={procedure.images} />;
   }
 }
 

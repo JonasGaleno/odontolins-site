@@ -2,15 +2,15 @@ import { ProcedureImages } from "@/type/procedures";
 import Image from "next/image";
 import ScrollReveal from "../ScrollReveal";
 
-interface LentesImageLayoutProps {
+interface TratamentoCanalImageLayoutProps {
     images: ProcedureImages[];
 }
 
-export default function LentesImageLayout ({images}: LentesImageLayoutProps) {
+export default function TratamentoCanalImageLayout ({images}: TratamentoCanalImageLayoutProps) {
     return (
-        <div className="mb-4 md:mb-6">
+        <div>
             {images.map((item, key) => (
-                <div key={key}>
+                <div className="mb-6 md:mb-8" key={key}>
                     {item.title !== "" &&
                         <ScrollReveal direction="up" delay={0.1}>
                             <h3 className="text-base md:text-lg font-semibold text-gray-800 mb-2 md:mb-4 text-center">
@@ -22,13 +22,13 @@ export default function LentesImageLayout ({images}: LentesImageLayoutProps) {
                         <ScrollReveal direction="up" delay={0.2}>
                             <div className="grid sm:grid-cols-2 gap-3 md:gap-4">
                                 {item.imgs.map((img, key2) => (
-                                    <div key={key2} className={`flex flex-col items-center ${item.title === "" && 'mt-2 md:mt-4' }`}>
+                                    <div key={key2} className="flex flex-col items-center">
                                         <p className="text-xs md:text-sm font-semibold text-gray-600 mb-2 uppercase text-center">
                                             {img.label}
                                         </p>
                                         <div
                                             className="relative bg-[#f5f5f5] border-2 md:border-3 border-[#C9A961] rounded-lg flex items-center justify-center aspect-square hover:shadow-lg transition-all duration-300 hover:scale-101 
-                                            w-[70%] h-auto sm:w-[250px] sm:h-70  md:w-[340px] md:h-60  lg:w-[450px] lg:h-70 
+                                            w-[70%] h-auto sm:w-[275px] sm:h-60 md:w-[330px] md:h-70 lg:w-[450px] lg:h-80 
                                             overflow-hidden"
                                         >
                                             <Image
@@ -44,7 +44,7 @@ export default function LentesImageLayout ({images}: LentesImageLayoutProps) {
                             </div>
                         </ScrollReveal>
                     </div>
-                </div>
+            </div>
             ))}
         </div>
     );
