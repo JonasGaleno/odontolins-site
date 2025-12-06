@@ -5,6 +5,8 @@ import { Localization } from "@/components/home/Localization"
 import { ProceduresSection } from "@/components/home/ProceduresSection"
 import { HeroSection } from "@/components/home/HeroSection"
 import { AllProcedures } from "@/components/home/AllProcedures"
+import ClinicSection from "@/components/home/ClinicSection"
+import ClientsSection from "@/components/home/ClientsSection"
 
 export default function Home() {
   const handleWhatsAppClick = () => {
@@ -20,7 +22,9 @@ export default function Home() {
     <main className="min-h-screen bg-[#f5f5f5]">
       <HeroSection handleWhatsAppClick={handleWhatsAppClick}/>
       <ProceduresSection />
+      <ClinicSection />
       <AllProcedures />
+      <ClientsSection />
       <Localization />
       <Testimonials />
     </main>

@@ -10,7 +10,7 @@ export function ProceduresSection() {
         window.location.href = `/procedures#${serviceId}`
     }
     return (
-        <section className="py-16 md:py-24 lg:py-32 px-4" style={{ backgroundColor: "#f5f5f5" }}>
+        <section className="py-10 md:py-24 px-4 md:px-16" style={{ backgroundColor: "#f5f5f5" }}>
             <div className="max-w-7xl mx-auto flex flex-col items-center gap-12">
             <SectionTitle title="NOSSOS PROCEDIMENTOS" />
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full">

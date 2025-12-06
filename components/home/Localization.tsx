@@ -5,7 +5,7 @@ import SectionTitle from "../SectionTitle";
 
 export function Localization() {
   return (
-    <section className="py-16 md:py-24 px-4 bg-[#f5f5f5]">
+    <section className="py-10 md:py-24 px-4 md:px-16 bg-[#f5f5f5]">
         <ScrollReveal
             delay={0.2}
             direction="up"

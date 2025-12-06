@@ -36,6 +36,15 @@ export const services = [
         }
     },
     { 
+        id: "tratamento-canal", 
+        name: "Tratamento de Canal",
+        image: {
+            src: "/img/services/tratamento-canal.webp",
+            alt: "Imagem Ilustração Tratamento de Canal",
+            title: "Imagem Ilustração Tratamento de Canal"
+        }
+    },
+    { 
         id: "siso", 
         name: "Extração de Siso",
         image: {
