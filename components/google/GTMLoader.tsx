@@ -1,8 +1,13 @@
 import Script from "next/script";
 
-const GTM_ID = "GTM-P5H3N5L";
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
 const GTMLoader = ({ consent }: { consent: boolean }) => {
+    if (!GTM_ID) {
+        console.warn("GTM ID não configurado. Verifique a variável de ambiente NEXT_PUBLIC_GTM_ID");
+        return null;
+    }
+
     return (
         consent && (
             <Script

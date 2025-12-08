@@ -1,6 +1,10 @@
-const GTM_ID = "GTM-P5H3N5L";
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
 const GTMLoaderNoScript = ({ consent }: { consent: boolean }) => {
+    if (!GTM_ID) {
+        return null;
+    }
+
     return (
         consent && (
             <noscript>

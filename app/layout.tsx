@@ -29,14 +29,14 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        {/* <GTMLoader consent={true} /> */}
+        <GTMLoader consent={true} />
       </head>
       <body 
         className={`font-sans antialiased ${_poppins.className} text-white`} 
         style={{ backgroundColor: "#0d1b3a" }}
         suppressHydrationWarning
       >
-        {/* <GTMLoaderNoScript consent={true} /> */}
+        <GTMLoaderNoScript consent={true} />
         <Header />
         {children}
         <Footer />
