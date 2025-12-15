@@ -92,6 +92,27 @@ export function Header() {
           </Button>
         </div>
 
+        <div className="flex md:hidden items-center gap-3">
+          <a
+              href="https://www.facebook.com/profile.php?id=61583641703351"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-all hover:scale-105"
+              aria-label="Facebook"
+          >
+              <FaFacebook className="w-6 h-6 text-[#c9a961]"/>
+          </a>
+          <a
+              href="https://www.instagram.com/odontolinsbsb?igsh=bWl3cW8xZzJiemFl&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-all hover:scale-105"
+              aria-label="Instagram"
+          >
+              <FaInstagram className="w-6 h-6 text-[#c9a961]"/>
+          </a>
+        </div>
+
         {/* Mobile Menu Button */}
         <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? (

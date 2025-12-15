@@ -11,7 +11,7 @@ export function Localization() {
             direction="up"
             className="max-w-4xl mx-auto"
         >
-            <SectionTitle title="LOCALIZAÇÃO" subtitle="Varjão Q 5 Conjunto b Lote 4 - Varjão, Brasília - DF, 71555-136"/>
+            <SectionTitle title="LOCALIZAÇÃO" subtitle="Quadra 05 conjunto B Lote 4 - Varjão Lago Norte, Brasília - DF, 71555-136"/>
             <div
                 className="w-full h-96 rounded-2xl overflow-hidden"
                 style={{
