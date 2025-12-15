@@ -3,7 +3,7 @@ export const services = [
         id: "implantes", 
         name: "Implantes",
         image: {
-            src: "/img/services/Implantes.png",
+            src: "/img/services/Implante2.png",
             alt: "Imagem Ilustração Implantes",
             title: "Imagem Ilustração Implantes"
         }
@@ -12,7 +12,7 @@ export const services = [
         id: "lentes", 
         name: "Lentes de Contato",
         image: {
-            src: "/img/services/Lentes.png",
+            src: "/img/services/Lentes2.png",
             alt: "Imagem Ilustração Lentes",
             title: "Imagem Ilustração Lentes"
         }
@@ -21,7 +21,7 @@ export const services = [
         id: "harmonizacao", 
         name: "Harmonização",
         image: {
-            src: "/img/services/Harmonização.png",
+            src: "/img/services/Harmonizacao2.png",
             alt: "Imagem Ilustração Harmonização",
             title: "Imagem Ilustração Harmonização"
         }
@@ -30,7 +30,7 @@ export const services = [
         id: "clareamento", 
         name: "Clareamento",
         image: {
-            src: "/img/services/Clareamento.png",
+            src: "/img/services/Clareamento2.png",
             alt: "Imagem Ilustração Clareamento",
             title: "Imagem Ilustração Clareamento"
         }
@@ -48,7 +48,7 @@ export const services = [
         id: "siso", 
         name: "Extração de Siso",
         image: {
-            src: "/img/services/Siso.png",
+            src: "/img/services/Siso2.webp",
             alt: "Imagem Ilustração Siso",
             title: "Imagem Ilustração Siso"
         }
@@ -57,7 +57,7 @@ export const services = [
         id: "aparelho", 
         name: "Aparelho",
         image: {
-            src: "/img/services/Aparelho.png",
+            src: "/img/services/Aparelho2.png",
             alt: "Imagem Ilustração Aparelho",
             title: "Imagem Ilustração Aparelho"
         }
@@ -66,7 +66,7 @@ export const services = [
         id: "plastica", 
         name: "Plástica Gengival",
         image: {
-            src: "/img/services/Plastica.png",
+            src: "/img/services/Plastica2.png",
             alt: "Imagem Ilustração Plastica",
             title: "Imagem Ilustração Plastica"
         }
@@ -75,7 +75,7 @@ export const services = [
         id: "pediatria", 
         name: "Pediatria",
         image: {
-            src: "/img/services/Pediatria.png",
+            src: "/img/services/Pediatria2.jpg",
             alt: "Imagem Ilustração Pediatria",
             title: "Imagem Ilustração Pediatria"
         }
