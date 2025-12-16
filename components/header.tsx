@@ -65,7 +65,7 @@ export function Header() {
           </Link>
           <div className="flex gap-3">
             <a
-                href="https://www.facebook.com/profile.php?id=61583641703351"
+                href="https://www.facebook.com/draleilalins"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-all hover:scale-105"
@@ -94,7 +94,7 @@ export function Header() {
 
         <div className="flex md:hidden items-center gap-3">
           <a
-              href="https://www.facebook.com/profile.php?id=61583641703351"
+              href="https://www.facebook.com/draleilalins"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-80 transition-all hover:scale-105"
